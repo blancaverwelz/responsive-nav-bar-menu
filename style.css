@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.section {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat 50% 50%;
+    display: table;
+    top: 0;
+    background-size: cover;
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(116, 153, 163);
+    border-bottom: 1px solid seashell;
+}
+
+.logo {
+    color: seashell;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Questrail', Arial, Helvetica, sans-serif;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.navMenu li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.navMenu a {
+    color: seashell;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navBar {
+    display: none;
+    cursor: pointer;
+
+}
+.navBar div{
+    width: 25px;
+    height: 3px;
+    background-color: seashell;
+    margin: 5px;
+    transition: all 0.7s ease;
+}
+
+.sign {
+    color: skyblue;
+}
+
+#blncvr {
+    text-align: center;
+    margin-top: 650px;
+    color: white;
+    font-size: 9px;
+}
+
+@media screen and (max-width: 1024px) {
+    .navMenu {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navMenu {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(116, 153, 163) ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .navMenu li {
+        opacity: 0;
+    }
+    .navBar {
+        display: block;
+    }
+}
+
+.navMenu-active {
+    transform: translateX(0%);
+}
+
+@keyframes navMenuFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.navBarToggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.navBarToggle .line2{
+    opacity: 0;
+}
+.navBarToggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
