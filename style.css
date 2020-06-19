@@ -111,6 +111,17 @@ nav {
     }
 }
 
+@media screen and (max-width: 414px) {
+    #home, #about, #contact, #blogs {
+        font-size: 10px;
+    }    
+}
+@media screen and (max-width: 320px) {
+    #home, #about, #contact, #blogs {
+        font-size: 9px;
+    }    
+}
+
 .navMenu-active {
     transform: translateX(0%);
 }
