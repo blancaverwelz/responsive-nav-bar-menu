@@ -87,8 +87,10 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    body {
+    html,body {
         overflow-x: hidden;
+        position: relative;
+        width: 100%;
     }
     .navMenu {
         position: absolute;
